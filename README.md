@@ -76,7 +76,9 @@ none of the 'assign to gym' links should appear next to any of the Pokemón.
 
 * As a user, when I visit the gym, if there are two Pokemón assigned to the gym, I will see both Pokemón1 and Pokemón2 slots populated in the gym.
 
-* As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'.
+* As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'. __HINT__ :
+Might it be advisable to pass in all of the data you need into the view before the user
+starts clicking buttons ? 
 
 STRETCH:
 

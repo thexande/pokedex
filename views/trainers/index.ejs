@@ -7,8 +7,9 @@ Trainers home page.
 
 <script type="text/javascript">
    var btn = document.getElementById("add_new");
+   var passedInData = '<%= passedInData %>' ;
    btn.addEventListener("click", function(){
-     alert("the button works, Trainer ! ");
+     alert("the button works, and we see "+passedInData);
    })
 
 </script>

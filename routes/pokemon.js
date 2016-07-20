@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('pokemon/index');
+  res.render('pokemon/index', {passedInData: "abc"});
 });
 
 module.exports = router;

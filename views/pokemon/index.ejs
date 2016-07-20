@@ -3,12 +3,13 @@
 
 Pokemón home page.
 
-<button type="button" name="button" id="add_new">+ Add New Pokemón</button>
+<button type="button" name="button" id="add_new">+ Add New Pokemon</button>
 
 <script type="text/javascript">
    var btn = document.getElementById("add_new");
+   var passedInData = '<%= passedInData %>' ;
    btn.addEventListener("click", function(){
-     alert("the button works, Pokemón ! ");
+     alert("the button works, and we see "+passedInData);
    })
 
 </script>
