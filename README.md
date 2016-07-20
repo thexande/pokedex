@@ -1,9 +1,8 @@
 ![](https://github.com/gSchool/pokemon-node/blob/master/public/images/pokemon-logo.png)
 
-
 ## Background
 
-**Pokemón Node** is a first-come , first-serve Pokemón environment where trainers are in charge of acquiring and developing Pokemón to spar in a gym.
+**Pokemón Node** is an app where a user can manage trainers and their corresponding Pokemón to spar in a gym.
 
 Trainers can come on to the app and acquire Pokemón that will belong exclusively to them.  One trainer can have many Pokemón, but each Pokemón belongs to only one trainer.
 
@@ -11,6 +10,7 @@ You will use cookies to set the names of two Pokemón :  p1 and p2 .  When you v
 
 The cookies p1 and p2 should correspond to the database ids of the two Pokemón that they refer to.
 For example, if you have a Raichu with an id of 22 in the database, then you would set a cookie p1 with a value of 22.
+
 The combat power is NOT in the cookie. You'll have to look up a Pokemón in the database when they fight to retrieve its combat power based on the id that has been set in the cookie.
 
 When you visit the gym, If both p1 and p2 are assigned, you can click "spar" and the two Pokemón will spar each other.
@@ -21,10 +21,41 @@ On the Trainers page, you should be able to see all trainers and have the abilit
 On the Pokemón page, you should be able to see all Pokemón and have the ability to CRUD Pokemón.  
 
 
+## Use the following Gherkin stories to guide your development.
 
-## Import stories into Pivotal Tracker
+As a user, when I view the Pokemón page, if there are less than two Pokemón assigned to the gym,
+every unassigned Pokemón should have a 'assign to gym' link before the edit and delete links.  
 
-Import this [CSV](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/galvanize_reads_20160104_0559.csv) into a new project in Pivotal Tracker to get the requirements for this story. They are prioritized. You may find it useful to size the stories before you begin.
+As a user, when I view the Pokemón page, if a Pokemón has already been assigned to a gym, there should
+be a 'remove from gym' link where the 'assign to gym' link was.
+
+As a user, when I view the Pokemón page, if two Pokemón have been assigned to the gym, none of the
+'assign to gym' links should appear next to any of the Pokemón.  
+
+As a user, when I visit the Pokemón page, when I click on the 'edit' link next to a Pokemón, I should be taken to an edit page.
+
+As a user, when I visit the Pokemón page, when I click on the 'delete' link next to a Pokemón, I should be taken to a page that deletes that Pokemón and then redirected back to the Pokemón page, where I will no longer see the deleted Pokemón in the list.
+
+As a user, when I visit the gym, if there are no Pokemón assigned to the gym, the Pokemón1 and Pokemón2
+slots will be empty.
+
+As a user, when I visit the gym, if there is only one Pokemón assigned to the gym, I will see only the Pokemón1 slot populated.
+
+As a user, when I visit the gym, if there are two Pokemón assigned to the gym, I will see both Pokemón1 and Pokemón2 slots populated in the gym.
+
+As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -46,7 +77,6 @@ You can use these mockups as a reference. Your design does not have to exactly m
 
 ![Pokemon - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png)
 
-
 ## GYM
 
 ![Gym](https://github.com/gSchool/pokemon-node/blob/master/mockups/gym.png)
@@ -62,4 +92,4 @@ Add a README to your project that has:
 * Link to your tracker project
 * Links to any repos you used with updated code
 
-Submit a pull request to the orginal repo with this README.
+Submit a pull request to the original repo with this README.
