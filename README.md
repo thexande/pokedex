@@ -41,11 +41,13 @@ trainer_id (integer)
 CP (integer)  /// CP stands for combat power
 in_gym (boolean)
 
-```
 
 6.  After you run your migration, run the seeds ( knex seed:run )
 7.  Inspect your database tables to make sure that you now have trainers and Pokemón
 8. Begin development on your project.  Follow the stories below.
+
+
+```
 
 
 
