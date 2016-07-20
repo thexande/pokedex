@@ -40,7 +40,7 @@ You can use these mockups as a reference. Your design does not have to exactly m
 
 ## TRAINERS INDEX
 
-![Trainers - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png)
+![Trainers - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/trainers-index.png)
 
 ## POKEMÓN INDEX
 
