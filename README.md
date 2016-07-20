@@ -45,11 +45,15 @@ in_gym (boolean)
 
 6.  After you run your migration, run the seeds ( knex seed:run )
 7.  Inspect your database tables to make sure that you now have trainers and Pokemón
-8. Begin development on your project.  Follow the stories below. 
+8. Begin development on your project.  Follow the stories below.
 
 
 
 ## Use the following Gherkin stories to guide your development.
+
+As a user, when I visit the Pokemon index page, I should view all Pokemon.
+
+As a user, when I visit the trainers index page, I should see a list of all trainers. 
 
 As a user, when I view the Pokemón page, if there are less than two Pokemón assigned to the gym,
 every unassigned Pokemón should have a 'assign to gym' link before the edit and delete links.  
