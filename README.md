@@ -80,7 +80,9 @@ As a user, when I visit the gym, if there are two Pokemón assigned to the gym, 
 
 STRETCH:
 
-As a user, when I fight two Pokemón, the winner's CP is incremented by 20.
+* As a user, when I fight two Pokemón, the winner's CP is incremented by 20.
+* Run a migration to add an image field to the Pokemon database that takes an image url,
+the image should show on both the gym pages and the Pokemón index page.
 
 
 
