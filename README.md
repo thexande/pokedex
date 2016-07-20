@@ -18,7 +18,35 @@ The one with the highest combat power wins.
 
 On the Trainers page, you should be able to see all trainers and have the ability to CRUD trainers.
 
-On the Pokemón page, you should be able to see all Pokemón and have the ability to CRUD Pokemón.  
+On the Pokemón page, you should be able to see all Pokemón and have the ability to CRUD Pokemón.
+
+## INSTRUCTIONS:
+
+```
+1. Fork and clone this repo.
+2. npm install
+3. If you are using knex, install knex and pg
+4. You'll need to create a database called pokemon
+5. Write a migration for the pokemon database that creates two tables: pokemon and trainers.
+Use the following information to build your migration :
+
+trainers:
+id (auto increment)
+name (string)
+
+pokemon:
+id (auto increment)
+name (string)
+trainer_id (integer)
+CP (integer)  /// CP stands for combat power
+in_gym (boolean)
+
+```
+
+6.  After you run your migration, run the seeds ( knex seed:run )
+7.  Inspect your database tables to make sure that you now have trainers and Pokemón
+8. Begin development on your project.  Follow the stories below. 
+
 
 
 ## Use the following Gherkin stories to guide your development.
