@@ -3,20 +3,20 @@
 
 ## Background
 
-**Pokemón Node** is a first-come , first-serve Pokemón environment where trainers are in charge of acquiring and developing Pokemón to spar in a gym. 
+**Pokemón Node** is a first-come , first-serve Pokemón environment where trainers are in charge of acquiring and developing Pokemón to spar in a gym.
 
-Trainers can come on to the app and acquire Pokemón that will belong exclusively to them.  One trainer can have many Pokemón, but each Pokemón belongs to only one trainer. 
+Trainers can come on to the app and acquire Pokemón that will belong exclusively to them.  One trainer can have many Pokemón, but each Pokemón belongs to only one trainer.
 
-You will use cookies to set the names of two Pokemón :  p1 and p2 .  When you visit the Pokemón page, if either p1 or p2 is not set, you can click on "assign" next to a Pokemón and they will be assigned to the gym. 
+You will use cookies to set the names of two Pokemón :  p1 and p2 .  When you visit the Pokemón page, if either p1 or p2 is not set, you can click on "assign" next to a Pokemón and they will be assigned to the gym.
 
-The cookies p1 and p2 should correspond to the database ids of the two Pokemón that they refer to. 
-For example, if you have a Raichu with an id of 22 in the database, then you would set a cookie p1 with a value of 22. 
-The combat power is NOT in the cookie. You'll have to look up a Pokemón in the database when they fight to retrieve its combat power based on the id that has been set in the cookie. 
+The cookies p1 and p2 should correspond to the database ids of the two Pokemón that they refer to.
+For example, if you have a Raichu with an id of 22 in the database, then you would set a cookie p1 with a value of 22.
+The combat power is NOT in the cookie. You'll have to look up a Pokemón in the database when they fight to retrieve its combat power based on the id that has been set in the cookie.
 
-When you visit the gym, If both p1 and p2 are assigned, you can click "spar" and the two Pokemón will spar each other. 
-The one with the highest combat power wins. 
+When you visit the gym, If both p1 and p2 are assigned, you can click "spar" and the two Pokemón will spar each other.
+The one with the highest combat power wins.
 
-On the Trainers page, you should be able to see all trainers and have the ability to CRUD trainers. 
+On the Trainers page, you should be able to see all trainers and have the ability to CRUD trainers.
 
 On the Pokemón page, you should be able to see all Pokemón and have the ability to CRUD Pokemón.  
 
@@ -36,11 +36,11 @@ Import this [CSV](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize
 
 ## Mockups
 
-You can use these mockups as a reference. Your design does not have to exactly match, but it should look as good or better than the mockups: 
+You can use these mockups as a reference. Your design does not have to exactly match, but it should look as good or better than the mockups:
 
-![Trainers - Index](![](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png))
-![Pokemon - Index](![](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png))
-![Gym](![](https://github.com/gSchool/pokemon-node/blob/master/mockups/gym.png))
+![Trainers - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png)
+![Pokemon - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png)
+![Gym](https://github.com/gSchool/pokemon-node/blob/master/mockups/gym.png)
 
 
 
