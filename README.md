@@ -23,6 +23,8 @@ On the Pokemón page, you should be able to see all Pokemón and have the abilit
 
 ## Use the following Gherkin stories to guide your development.
 
+```
+
 As a user, when I view the Pokemón page, if there are less than two Pokemón assigned to the gym,
 every unassigned Pokemón should have a 'assign to gym' link before the edit and delete links.  
 
@@ -45,19 +47,7 @@ As a user, when I visit the gym, if there are two Pokemón assigned to the gym, 
 
 As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 ## Notes
 
