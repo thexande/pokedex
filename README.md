@@ -51,6 +51,8 @@ in_gym (boolean)
 
 ## Use the following Gherkin stories to guide your development.
 
+As a user, when I visit the root route ("/") , I am redirected to Pokemón index page.
+
 As a user, when I visit the Pokemón index page, I should view all Pokemón.
 
 As a user, when I visit the trainers index page, I should see a list of all trainers.
