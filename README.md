@@ -74,6 +74,8 @@ none of the 'assign to gym' links should appear next to any of the Pokemón.
 
 * As a user, when I visit the Pokemón page, when I click on the 'delete' link next to a Pokemón, I should be taken to a page that deletes that Pokemón and then redirected back to the Pokemón page, where I will no longer see the deleted Pokemón in the list.
 
+* As a user, when I visit the trainer page, when I click on the 'delete' link next to a trainer, I should be taken to a page that deletes that trainer and then redirected back to the trainer page, where I will no longer see the deleted trainer in the list.
+
 * As a user, when I visit the gym, if there are no Pokemón assigned to the gym, the Pokemón1 and Pokemón2 slots will be empty.
 
 * As a user, when I visit the gym, if there is only one Pokemón assigned to the gym, I will see only the Pokemón1 slot populated.
@@ -101,9 +103,9 @@ the image should show on both the gym pages and the Pokemón index page.
 * You can use a raw database driver, a query builder, or an ORM for your database connection. A query builder, such as Knex, is recommended.
 * Deploy your work
 
-## Mockups
+## WIREFRAMES
 
-You can use these mockups as a reference. Your design does not have to exactly match, but it should look as good or better than the mockups:
+You can use these mockups/wireframes as a reference. Your design does not have to exactly match, but it should look as good or preferably BETTER than the mockups:
 
 ## TRAINERS INDEX
 
