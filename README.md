@@ -11,7 +11,9 @@ You will use cookies to set the names of two Pokemón :  p1 and p2 .  When you v
 The cookies p1 and p2 should correspond to the database ids of the two Pokemón that they refer to.
 For example, if you have a Raichu with an id of 22 in the database, then you would set a cookie p1 with a value of 22.
 
-The combat power is NOT in the cookie. You'll have to look up a Pokemón in the database when they fight to retrieve its combat power based on the id that has been set in the cookie.
+The combat power should NOT be stored in a cookie. You'll have to look up a Pokemón in the database when they fight to retrieve its combat power based on the id that has been set in the cookie.
+
+If you want to use session variables instead of cookies, that is fine.
 
 When you visit the gym, If both p1 and p2 are assigned, you can click "spar" and the two Pokemón will spar each other.
 The one with the highest combat power wins.
@@ -78,13 +80,15 @@ none of the 'assign to gym' links should appear next to any of the Pokemón.
 
 * As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'. __HINT__ :
 Might it be advisable to pass in all of the data you need into the view before the user
-starts clicking buttons ? 
+starts clicking buttons ?
 
 STRETCH:
 
+* Add a "clear all" link to clear all Pokemón from the gym. 
 * As a user, when I fight two Pokemón, the winner's CP is incremented by 20.
 * Run a migration to add an image field to the Pokemon database that takes an image url,
 the image should show on both the gym pages and the Pokemón index page.
+
 
 
 
