@@ -23,18 +23,17 @@ On the Pokemón page, you should be able to see all Pokemón and have the abilit
 
 ## Use the following Gherkin stories to guide your development.
 
-```
-
 As a user, when I view the Pokemón page, if there are less than two Pokemón assigned to the gym,
 every unassigned Pokemón should have a 'assign to gym' link before the edit and delete links.  
 
 As a user, when I view the Pokemón page, if a Pokemón has already been assigned to a gym, there should
 be a 'remove from gym' link where the 'assign to gym' link was.
 
-As a user, when I view the Pokemón page, if two Pokemón have been assigned to the gym, none of the
-'assign to gym' links should appear next to any of the Pokemón.  
+As a user, when I view the Pokemón page, if two Pokemón have been assigned to the gym,
+none of the 'assign to gym' links should appear next to any of the Pokemón.  
 
-As a user, when I visit the Pokemón page, when I click on the 'edit' link next to a Pokemón, I should be taken to an edit page.
+As a user, when I visit the Pokemón page, when I click on the 'edit' link next to a Pokemón,
+I should be taken to an edit page.
 
 As a user, when I visit the Pokemón page, when I click on the 'delete' link next to a Pokemón, I should be taken to a page that deletes that Pokemón and then redirected back to the Pokemón page, where I will no longer see the deleted Pokemón in the list.
 
@@ -47,7 +46,7 @@ As a user, when I visit the gym, if there are two Pokemón assigned to the gym, 
 
 As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'.
 
-```
+
 
 ## Notes
 
