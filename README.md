@@ -70,6 +70,8 @@ none of the 'assign to gym' links should appear next to any of the Pokemón.
 
 * As a user, when I visit the Pokemón page, when I click on the 'edit' link next to a Pokemón, I should be taken to an edit page.
 
+* As a user, when I visit the trainers page, when I click on the 'edit' link next to a trainer, I should be taken to an edit page.
+
 * As a user, when I visit the Pokemón page, when I click on the 'delete' link next to a Pokemón, I should be taken to a page that deletes that Pokemón and then redirected back to the Pokemón page, where I will no longer see the deleted Pokemón in the list.
 
 * As a user, when I visit the gym, if there are no Pokemón assigned to the gym, the Pokemón1 and Pokemón2 slots will be empty.
