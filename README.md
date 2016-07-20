@@ -38,8 +38,17 @@ Import this [CSV](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize
 
 You can use these mockups as a reference. Your design does not have to exactly match, but it should look as good or better than the mockups:
 
+## TRAINERS INDEX
+
 ![Trainers - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png)
+
+## POKEMÓN INDEX
+
 ![Pokemon - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png)
+
+
+## GYM
+
 ![Gym](https://github.com/gSchool/pokemon-node/blob/master/mockups/gym.png)
 
 
