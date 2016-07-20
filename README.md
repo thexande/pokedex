@@ -82,9 +82,11 @@ none of the 'assign to gym' links should appear next to any of the Pokemón.
 Might it be advisable to pass in all of the data you need into the view before the user
 starts clicking buttons ?
 
+* Add a "reset" link somewhere to allow the user to remove all Pokemón from the gym.
+
 STRETCH:
 
-* Add a "clear all" link to clear all Pokemón from the gym. 
+
 * As a user, when I fight two Pokemón, the winner's CP is incremented by 20.
 * Run a migration to add an image field to the Pokemon database that takes an image url,
 the image should show on both the gym pages and the Pokemón index page.
