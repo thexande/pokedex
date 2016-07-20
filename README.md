@@ -68,6 +68,8 @@ in_gym (boolean)
 * As a user, when I view the Pokemón page, if two Pokemón have been assigned to the gym,
 none of the 'assign to gym' links should appear next to any of the Pokemón.  
 
+* As a user, when I view the Pokemón page and click on a Pokemón, I should be taken to a "show" page that shows the details of the Pokemón that I clicked on, including the name of the Pokemón's trainer. (wireframe not shown, implement your own ideas.)
+
 * As a user, when I visit the Pokemón page, when I click on the 'edit' link next to a Pokemón, I should be taken to an edit page.
 
 * As a user, when I visit the trainers page, when I click on the 'edit' link next to a trainer, I should be taken to an edit page.
