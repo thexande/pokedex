@@ -51,7 +51,6 @@ As a user, when I visit the gym, if there are two Pokemón assigned to the gym, 
 ## Notes
 
 * You can use a raw database driver, a query builder, or an ORM for your database connection. A query builder, such as Knex, is recommended.
-* Use feature-branch workflows. You should end up with one commit for each feature.
 * Deploy your work
 
 ## Mockups
