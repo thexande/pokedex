@@ -26,7 +26,7 @@ On the Pokemón page, you should be able to see all Pokemón and have the abilit
 1. Fork and clone this repo.
 2. npm install
 3. If you are using knex, install knex and pg
-4. You'll need to create a database called pokemon
+4. You'll need to create a database called pokemon-node
 5. Write a migration for the pokemon database that creates two tables: pokemon and trainers.
 Use the following information to build your migration :
 
@@ -51,9 +51,9 @@ in_gym (boolean)
 
 ## Use the following Gherkin stories to guide your development.
 
-As a user, when I visit the Pokemon index page, I should view all Pokemon.
+As a user, when I visit the Pokemón index page, I should view all Pokemón.
 
-As a user, when I visit the trainers index page, I should see a list of all trainers. 
+As a user, when I visit the trainers index page, I should see a list of all trainers.
 
 As a user, when I view the Pokemón page, if there are less than two Pokemón assigned to the gym,
 every unassigned Pokemón should have a 'assign to gym' link before the edit and delete links.  
@@ -77,6 +77,10 @@ As a user, when I visit the gym, if there is only one Pokemón assigned to the g
 As a user, when I visit the gym, if there are two Pokemón assigned to the gym, I will see both Pokemón1 and Pokemón2 slots populated in the gym.
 
 As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'.
+
+STRETCH:
+
+As a user, when I fight two Pokemón, the winner's CP is incremented by 20.
 
 
 
