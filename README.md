@@ -10,7 +10,7 @@ __Stay calm and code on!__
 
 **Pokemón Node** is an app where a user can manage trainers and their corresponding
 Pokemón to spar in a gym. Users should be able to READ, UPDATE, and DELETE Pokemón,
-as well as assign  Pokemón to the gym (details below).
+as well as assign Pokemón to the gym (details below).
 
 Your app should look at _least_ as good as the wireframes, preferably better.
 
@@ -30,9 +30,9 @@ npm install
 nodemon
 ```
 
-1. Install `knex` and `pg` and __get knex wired up to your database__
-2. You'll need to create a database called `pokemon-node`
-3. Write a migration for the pokemon database that creates two tables:
+* Install `knex` and `pg` and __get knex wired up to your database__
+* You'll need to create a database called `pokemon-node`
+* Write a migration for the pokemon database that creates two tables:
   * pokemon
   * trainers.
 
@@ -40,25 +40,25 @@ nodemon
 
 __trainers__
 
-id (auto increment)
-name (string)
+* id (auto increment)
+* name (string)
 
 __pokemon__
 
-id (auto increment)
-name (string)
-trainer_id (integer)
-cp (integer)  /// cp stands for combat power
-in_gym (boolean)
+* id (auto increment)
+* name (string)
+* trainer_id (integer)
+* cp (integer)  __=>__ cp stands for combat power
+* in_gym (boolean)
 
-4.  After you run your migrations, seed the databas by running:
+__After you run your migrations, seed the database by running:__
 
 ```
 knex seed:run
 ```
 
-5. Inspect your database tables to make sure that you now have trainers and Pokemón
-6. Follow the stories below.
+* Inspect your database tables to make sure that you now have trainers and pokemon
+* Follow the stories below.
 
 
 # Use the following Gherkin stories to guide your development:
@@ -129,9 +129,8 @@ Then I am redirected to the Pokemón home page
 And that Pokemón is no longer listed
 ```
 
-__#7__
 
-_OVERVIEW_
+_OVERVIEW of STORY # 7_
 
 * You will use cookies to set the values `p1` and `p2` to be the `id `of a Pokemón.  
 * When you visit the Pokemón home page, if either the `p1` or `p2` cookies is not set,
@@ -145,6 +144,8 @@ __EXAMPLE:__ If you have a Raichu with an id of 22 in the database and you click
 
 __NOTE:__ Your database should _always_ be updated to have the current `in_gym`
 status of _all_ Pokemón.
+
+__#7__
 
 ```
 As a user
@@ -182,12 +183,21 @@ When I visit the gym home page
 And there are no Pokemón assigned to the gym
 Then I can select a Pokemón1 from a drop down menu that has all Pokemón names
 And I can select a Pokemón2 from a drop down menu that has all Pokemón names
-And when I click 'Add Pokemón to the Gym'
+```
+
+__#2__
+
+```
+When I visit the gym home page
+And there are no Pokemón assigned to the gym
+And I select a Pokemón1 from a drop down menu that has all Pokemón names
+And I select a Pokemón2 from a drop down menu that has all Pokemón names
+When I click 'Add Pokemón to the Gym'
 Then I am redirected to the gym home page
 And I see my Pokemón 'in the gym'
 ```
 
-__#2__
+__#3__
 
 ```
 When I visit the gym home page
@@ -196,7 +206,7 @@ Then I see a Pokemón name in the Pokemón1 slot
 And by the Pokemón2 slot I see a dropdown menu with all Pokemón names
 ```
 
-__#3__
+__#4__
 
 ```
 When I visit the gym home page
@@ -208,7 +218,7 @@ And I see a Pokemón in the Pokemón1 slot
 And I see my selected Pokemón in the Pokemón2 slot
 ```
 
-__#6__
+__#5__
 
 ```
 When I visit the gym home page
@@ -222,7 +232,7 @@ And that error message says
 And that message is the color red
 ```
 
-__#5__
+__#6__
 
 ```
 When I visit the gym home page
@@ -231,7 +241,7 @@ Then I see a Pokemón name in the Pokemón1 slot
 And I see a Pokemón name in the Pokemón2 slot
 ```
 
-__#5__
+__#7__
 
 ```
 When I visit the gym home page
@@ -239,7 +249,7 @@ And two Pokemón are already in the gym
 Then I see a 'spar' button
 ```
 
-__#6__
+__#8__
 
 ```
 When I visit the gym home page
@@ -247,7 +257,7 @@ And only one Pokemón is in the gym
 Then I do not see the 'spar' button
 ```
 
-__#7__
+__#9__
 
 ```
 When I visit the gym home page
@@ -261,7 +271,7 @@ when the page loads (before the user clicks the button?)? HOWEVER, a Pokemón's
 Combat Power should NOT be stored in the cookie. You will need to get that info
 from the database.
 
-__#8__
+__#10__
 
 ```
 When I visit the gym home page
