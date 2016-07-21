@@ -130,7 +130,7 @@ a img{
   }
 
     .pokemon-navigation .mdl-navigation__link:hover {
-      border-bottom: 4px solid #8bc34a;
+      border-bottom: 4px solid #E3B845;
     }
 
   .pokemon-search-box {
@@ -310,7 +310,7 @@ a img{
 
 .pokemon-wear-section {
   position: relative;
-  /*background: url('/images/wear.png') center top no-repeat;*/
+  background: url('/images/ball_background_opaque.png') center top no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -341,7 +341,7 @@ a img{
 }
 
   .pokemon-link:hover {
-    color: #7cb342 !important;
+    color: #E3B845 !important;
   }
 
   .pokemon-link .material-icons {
@@ -357,7 +357,7 @@ a img{
 }
 
   .pokemon-alt-link:hover {
-    color: #00bfa5 !important;
+    color: #E3B845 !important;
   }
 
   .pokemon-alt-link .material-icons {
