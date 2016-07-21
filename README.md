@@ -1,113 +1,306 @@
 ![](https://github.com/gSchool/pokemon-node/blob/master/public/images/pokemon-logo.png)
 
-## Background
+## WELCOME to the Q2 Assessment!
 
-**Pokemón Node** is an app where a user can manage trainers and their corresponding Pokemón to spar in a gym.
+Move deliberately and methodically through the stories provided below.
 
-Trainers can come on to the app and acquire Pokemón that will belong exclusively to them.  One trainer can have many Pokemón, but each Pokemón belongs to only one trainer.
+__Stay calm and code on!__
 
-You will use cookies to set the names of two Pokemón :  p1 and p2 .  When you visit the Pokemón page, if either p1 or p2 is not set, you can click on "assign" next to a Pokemón and they will be assigned to the gym.
+## Assessment Overview
 
-The cookies p1 and p2 should correspond to the database ids of the two Pokemón that they refer to.
-For example, if you have a Raichu with an id of 22 in the database, then you would set a cookie p1 with a value of 22.
+**Pokemón Node** is an app where a user can manage trainers and their corresponding
+Pokemón to spar in a gym. Users should be able to READ, UPDATE, and DELETE Pokemón,
+as well as assign Pokemón to the gym (details below).
 
-The combat power should NOT be stored in a cookie. You'll have to look up a Pokemón in the database when they fight to retrieve its combat power based on the id that has been set in the cookie.
+Your app should look at _least_ as good as the wireframes, preferably better.
 
 If you want to use session variables instead of cookies, that is fine.
 
-When you visit the gym, If both p1 and p2 are assigned, you can click "spar" and the two Pokemón will spar each other.
-The one with the highest combat power wins.
+Your app should use `pg` and `knex`, and your schema should be built
+using `migrations`.
 
-On the Trainers page, you should be able to see all trainers and have the ability to CRUD trainers.
-
-On the Pokemón page, you should be able to see all Pokemón and have the ability to CRUD Pokemón.
+Your app should be deployed to Heroku.
 
 ## INSTRUCTIONS:
 
 ```
-1. Fork and clone this repo.
-2. npm install
-3. If you are using knex, install knex and pg
-4. You'll need to create a database called pokemon-node
-5. Write a migration for the pokemon database that creates two tables: pokemon and trainers.
-Use the following information to build your migration :
+Fork and clone this repo
+cd into repo
+npm install
+nodemon
+```
 
-trainers:
-id (auto increment)
-name (string)
+* Install `knex` and `pg` and __get knex wired up to your database__
+* You'll need to create a database called `pokemon-node`
+* Write a migration for the pokemon database that creates two tables:
+  * pokemon
+  * trainers.
 
-pokemon:
-id (auto increment)
-name (string)
-trainer_id (integer)
-CP (integer)  /// CP stands for combat power
-in_gym (boolean)
+### Use the following information to build your migrations (schema):
+
+__trainers__
+
+* id (auto increment)
+* name (string)
+
+__pokemon__
+
+* id (auto increment)
+* name (string)
+* trainer_id (integer)
+* cp (integer)  __=>__ cp stands for combat power
+* in_gym (boolean)
+
+__After you run your migrations, seed the database by running:__
+
+```
+knex seed:run
+```
+
+* Inspect your database tables to make sure that you now have trainers and pokemon
+* Follow the stories below.
 
 
-6.  After you run your migration, run the seeds ( knex seed:run )
-7.  Inspect your database tables to make sure that you now have trainers and Pokemón
-8. Begin development on your project.  Follow the stories below.
+# Use the following Gherkin stories to guide your development:
 
+__You should git add, commit, push, and deploy to Heroku after each story is completed__
 
+### Pokemón and Pokemón CRUD
+
+__#1__
+
+```
+As a user
+When I go to the root route '/'
+Then I am redirected to `/pokemon`
+```
+
+__#2__
+
+```
+When I visit '/pokemon'
+Then I see a list of all Pokemón and their properties
+And I see a link to DELETE
+And I see a link to EDIT
+```
+
+__#3__
+
+```
+When I visit the Pokemón home page
+And I see all Pokemón
+When I click on a Pokemón name
+Then I am taken to a show page
+And I see all the properties for that Pokemón
+And I see the name of that Pokemón's trainer
+```
+__wireframe not shown, implement your own ideas.__
+
+__#4__
+
+Trainers can acquire Pokemón that will belong exclusively to them.
+One trainer can have many Pokemón, but each Pokemón belongs to only one trainer.
+
+```
+When I visit the Pokemón home page
+And I see all Pokemón
+And I click the 'EDIT' link for a Pokemón
+Then I am taken to a form
+And the form is prefilled with information for that Pokemón
+And I see the name of that Pokemón's trainer
+And that name is in a drop down menu that also has the names of all the other trainers
+```
+
+__#5__
+
+```
+When I submit an edit form for a Pokemón
+Then I am redirected to the show page for that Pokemón
+And I see all new details for my updated Pokemón
+```
+
+__#6__
+
+```
+When I visit the Pokemón home page
+And I see all Pokemón
+And I click the 'DELETE' link for a Pokemón
+Then I am redirected to the Pokemón home page
+And that Pokemón is no longer listed
 ```
 
 
+_OVERVIEW of STORY # 7_
 
-## Use the following Gherkin stories to guide your development.
+* You will use cookies to set the values `p1` and `p2` to be the `id `of a Pokemón.  
+* When you visit the Pokemón home page, if either the `p1` or `p2` cookies is not set,
+then you can click 'assign to gym' next to a Pokemón and they will be
+'assigned to the gym' (aka their id will be assigned to either `p1` or `p2`)
+* and their 'in_gym' status in the database will be updated to `true`
 
-* As a user, when I visit the root route ("/") , I am redirected to Pokemón index page.
-
-* As a user, when I visit the Pokemón index page, I should view all Pokemón.
-
-* As a user, when I visit the trainers index page, I should see a list of all trainers.
-
-* As a user, when I view the index Pokemón page, if there are less than two Pokemón assigned to the gym, every unassigned Pokemón should have a 'assign to gym' link before the edit and delete links.  
-
-* As a user, when I view the Pokemón page, if a Pokemón has already been assigned to a gym, there should be a 'remove from gym' link where the 'assign to gym' link was.
-
-* As a user, when I view the Pokemón page, if two Pokemón have been assigned to the gym,
-none of the 'assign to gym' links should appear next to any of the Pokemón.  
-
-* As a user, when I view the Pokemón page and click on a Pokemón, I should be taken to a "show" page that shows the details of the Pokemón that I clicked on, including the name of the Pokemón's trainer. (wireframe not shown, implement your own ideas.)
-
-* As a user, when I visit the Pokemón page, when I click on the 'edit' link next to a Pokemón, I should be taken to an edit page.
-
-* As a user, when I visit the trainers page, when I click on the 'edit' link next to a trainer, I should be taken to an edit page.
-
-* As a user, when I visit the Pokemón page, when I click on the 'delete' link next to a Pokemón, I should be taken to a page that deletes that Pokemón and then redirected back to the Pokemón page, where I will no longer see the deleted Pokemón in the list.
-
-* As a user, when I visit the trainer page, when I click on the 'delete' link next to a trainer, I should be taken to a page that deletes that trainer and then redirected back to the trainer page, where I will no longer see the deleted trainer in the list.
-
-* As a user, when I visit the gym, if there are no Pokemón assigned to the gym, the Pokemón1 and Pokemón2 slots will be empty.
-
-* As a user, when I visit the gym, if there is only one Pokemón assigned to the gym, I will see only the Pokemón1 slot populated.
-
-* As a user, when I visit the gym, if there are two Pokemón assigned to the gym, I will see both Pokemón1 and Pokemón2 slots populated in the gym.
-
-* As a user, when I visit the gym, if there are two Pokemón assigned to the gym, when I click the 'spar' button, the Pokemón with the highest Combat Power will win the fight and the winner's name will be displayed on the page next to the word 'winner'. __HINT__ :
-Might it be advisable to pass in all of the data you need into the view before the user
-starts clicking buttons ?
-
-* Add a "reset" link somewhere to allow the user to remove all Pokemón from the gym.
-
-STRETCH:
+__EXAMPLE:__ If you have a Raichu with an id of 22 in the database and you click
+'assign to gym' then you would set a cookie p1 with a value of 22.
 
 
-* As a user, when I fight two Pokemón, the winner's CP is incremented by 20.
-* Run a migration to add an image field to the Pokemon database that takes an image url,
-the image should show on both the gym pages and the Pokemón index page.
+__NOTE:__ Your database should _always_ be updated to have the current `in_gym`
+status of _all_ Pokemón.
 
+__#7__
 
+```
+As a user
+When I visit the Pokemón home page
+And I see all Pokemón
+And less than 2 Pokemón are 'in the gym'
+Then I see a link 'assign to gym' next to every Pokemón that is not 'in the gym'
+```
 
+__#8__
 
-## Notes
+```
+When I visit the Pokemón home page
+And I see all Pokemón
+And there are already 2 Pokemón 'in the gym'
+Then I do not see 'assign to gym' links for any other Pokemón
+```
+__#9__
 
-* You can use a raw database driver, a query builder, or an ORM for your database connection. A query builder, such as Knex, is recommended.
-* Deploy your work
+```
+When I go to the Pokemón home page
+And I see all Pokemón
+And a Pokemón is 'in the gym'
+Then I see a link 'remove from gym' next to that Pokemón
+And I do NOT see a link 'assign to gym' next to that Pokemón
+```
+
+### In the Gym
+
+__#1__
+
+```
+As a user
+When I visit the gym home page
+And there are no Pokemón assigned to the gym
+Then I can select a Pokemón1 from a drop down menu that has all Pokemón names
+And I can select a Pokemón2 from a drop down menu that has all Pokemón names
+```
+
+__#2__
+
+```
+When I visit the gym home page
+And there are no Pokemón assigned to the gym
+And I select a Pokemón1 from a drop down menu that has all Pokemón names
+And I select a Pokemón2 from a drop down menu that has all Pokemón names
+When I click 'Add Pokemón to the Gym'
+Then I am redirected to the gym home page
+And I see my Pokemón 'in the gym'
+```
+
+__#3__
+
+```
+When I visit the gym home page
+And only one Pokemón is 'in the gym'
+Then I see a Pokemón name in the Pokemón1 slot
+And by the Pokemón2 slot I see a dropdown menu with all Pokemón names
+```
+
+__#4__
+
+```
+When I visit the gym home page
+And only one Pokemón is 'in the gym'
+And I select a second Pokemón name from a dropdown menu
+And I click the 'Add Pokemón to the Gym' button
+Then I am redirected to the gym home page
+And I see a Pokemón in the Pokemón1 slot
+And I see my selected Pokemón in the Pokemón2 slot
+```
+
+__#5__
+
+```
+When I visit the gym home page
+And only one Pokemón is 'in the gym'
+And I select a second Pokemón name from a dropdown menu
+And that Pokemón is the SAME Pokemón already in a slot
+Then the gym home page is rendered again
+And I a see an error message
+And that error message says
+"A Pokemón cannot fight itself! Please choose a different Pokemón!"
+And that message is the color red
+```
+
+__#6__
+
+```
+When I visit the gym home page
+And 2 Pokemón are 'in the gym'
+Then I see a Pokemón name in the Pokemón1 slot
+And I see a Pokemón name in the Pokemón2 slot
+```
+
+__#7__
+
+```
+When I visit the gym home page
+And two Pokemón are already in the gym
+Then I see a 'spar' button
+```
+
+__#8__
+
+```
+When I visit the gym home page
+And only one Pokemón is in the gym
+Then I do not see the 'spar' button
+```
+
+__#9__
+
+```
+When I visit the gym home page
+And two Pokemón are already in the gym
+And I click the 'spar' button
+Then the Pokemón with the higher Combat Power 'wins' the fight
+And the winning Pokemón's name is displayed on the page next to the word 'WINNER!'
+```
+__HINT:__ Would it be simpler if all the data you need is passed in to the view
+when the page loads (before the user clicks the button?)? HOWEVER, a Pokemón's
+Combat Power should NOT be stored in the cookie. You will need to get that info
+from the database.
+
+__#10__
+
+```
+When I visit the gym home page
+And I click the 'reset' button (or link)
+Then all the Pokemón are removed from the gym
+```
+
+### Stretch Goals
+
+__#1__
+
+```
+As a user
+When I make 2 Pokemón spar
+Then the winner's CP is incremented by 20
+```
+
+__#2__
+
+* Write a migration that adds an image field to the Pokemón table that takes an
+image url.
+
+* Display the image on both the gym and the Pokemón index page.
+
 
 ## WIREFRAMES
 
-You can use these mockups/wireframes as a reference. Your design does not have to exactly match, but it should look as good or preferably BETTER than the mockups:
+You can use these mockups/wireframes as a reference. Your design does not have to
+exactly match, but it should look as good or preferably BETTER than the mockups:
 
 ## TRAINERS INDEX
 
@@ -122,14 +315,25 @@ You can use these mockups/wireframes as a reference. Your design does not have t
 ![Gym](https://github.com/gSchool/pokemon-node/blob/master/mockups/gym.png)
 
 
-
 ## How to Submit Your Assessment
 
-Fork/clone [this repo](https://github.com/gSchool/pokemon-node).
-Add a README to your project that has:
+1. Add your Heroku URL to the TOP of this readme
+2. Submit a pull request
 
-* A link to your deployed site
-* Link to your tracker project
-* Links to any repos you used with updated code
+## RESOURCES FROM PAST ASSIGNMENTS
+( AND DON'T FORGET ABOUT THE DOCS! )
 
-Submit a pull request to the original repo with this README.
+__Deployment__
+* https://github.com/gSchool/intro-to-deploying-express-pg-apps-to-heroku
+( GO TO GITHUB BRANCH g29 to see the way we've been doing it )
+
+__Knex and Deployment__
+* https://github.com/gSchool/knex-migrations-and-deployment
+
+__CRUD with KNEX__
+* https://github.com/gSchool/pirates-crud-with-pg-knex-raw
+
+__COOKIES__
+* https://github.com/gSchool/auth_sandbox  ( AUTH SANDBOX )
+* https://learn.galvanize.com/redirects/articles/3610  ( VIEW VIDEO #3 ON COOKIES )
+* Nmuta's YouTube channel cookies live coding videos ( 9 videos ) : https://www.youtube.com/channel/UCxM6--J9pxeS3geqe1MVxsg
