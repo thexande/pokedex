@@ -9,7 +9,7 @@ __Stay calm and code on!__
 ## Assessment Overview
 
 **Pokemón Node** is an app where a user can manage trainers and their corresponding
-Pokemón to battle in a gym. Users should be able to READ, UPDATE, and DELETE Pokemón,
+Pokemón to battle in a gym. Users should be able to CREATE, READ, UPDATE, and DELETE Pokemón,
 as well as assign Pokemón to the gym (details below).
 
 Your app should look at _least_ as good as the wireframes, preferably better.
@@ -78,13 +78,36 @@ Then I am redirected to `/pokemon`
 __#2__
 
 ```
+As a user
+When I visit /pokemon
+Then I see a button to 'Add a New Pokemon
+```
+
+__#3__
+
+```
+When I click the 'Add a New Pokemon' button
+Then I see a form to add a new Pokemon
+```
+
+__#4__
+
+```
+When I submit the form to add a new Pokemon
+Then I am redirected to the Pokemon home page
+And I see my new Pokemon listed
+```
+
+__#5__
+
+```
 When I visit '/pokemon'
 Then I see a list of all Pokemón and their properties
 And I see a link to DELETE
 And I see a link to EDIT
 ```
 
-__#3__
+__#6__
 
 ```
 When I visit the Pokemón home page
@@ -96,7 +119,7 @@ And I see the name of that Pokemón's trainer
 ```
 __wireframe not shown, implement your own ideas.__
 
-__#4__
+__#7__
 
 Trainers can acquire Pokemón that will belong exclusively to them.
 One trainer can have many Pokemón, but each Pokemón belongs to only one trainer.
@@ -111,7 +134,7 @@ And I see the name of that Pokemón's trainer
 And that name is in a drop down menu that also has the names of all the other trainers
 ```
 
-__#5__
+__#8__
 
 ```
 When I submit an edit form for a Pokemón
@@ -119,7 +142,7 @@ Then I am redirected to the show page for that Pokemón
 And I see all new details for my updated Pokemón
 ```
 
-__#6__
+__#9__
 
 ```
 When I visit the Pokemón home page
@@ -145,7 +168,7 @@ __EXAMPLE:__ If you have a Raichu with an id of 22 in the database and you click
 __NOTE:__ Your database should _always_ be updated to have the current `in_gym`
 status of _all_ Pokemón.
 
-__#7__
+__#10__
 
 ```
 As a user
@@ -155,7 +178,7 @@ And less than 2 Pokemón are 'in the gym'
 Then I see a link 'assign to gym' next to every Pokemón that is not 'in the gym'
 ```
 
-__#8__
+__#11__
 
 ```
 When I visit the Pokemón home page
@@ -163,7 +186,7 @@ And I see all Pokemón
 And there are already 2 Pokemón 'in the gym'
 Then I do not see 'assign to gym' links for any other Pokemón
 ```
-__#9__
+__#12__
 
 ```
 When I go to the Pokemón home page
@@ -171,6 +194,16 @@ And I see all Pokemón
 And a Pokemón is 'in the gym'
 Then I see a link 'remove from gym' next to that Pokemón
 And I do NOT see a link 'assign to gym' next to that Pokemón
+```
+
+### Trainers
+
+__#1__
+
+```
+As a user
+When I visit /trainers
+Then I see a list of all Trainers
 ```
 
 ### In the Gym
