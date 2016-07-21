@@ -348,6 +348,10 @@ exactly match, but it should look as good or preferably BETTER than the mockups:
 
 ![Trainers - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/trainers-index.png)
 
+## TRAINERS SHOW PAGE /trainers/:id
+
+![Trainers - Show](https://github.com/gSchool/pokemon-node/blob/master/mockups/trainers-index.png)
+
 ## POKEMÓN INDEX
 
 ![Pokemon - Index](https://github.com/gSchool/pokemon-node/blob/master/mockups/pokemon-index.png)
