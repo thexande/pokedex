@@ -206,6 +206,15 @@ When I visit /trainers
 Then I see a list of all Trainers
 ```
 
+__#2__
+
+```
+When I click on the name of a Trainer
+Then I am taken to a show page
+And I see the name of that Trainer
+And I see all of the Pokemon they are currently training
+```
+
 ### In the Gym
 
 __#1__
