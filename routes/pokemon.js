@@ -14,7 +14,7 @@ router.route('/')
 
 router.route('/new')
   .get((req, res, next) => {
-
+    res.render('pokemon/new')
   })
 
 module.exports = router;

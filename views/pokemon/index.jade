@@ -2,19 +2,22 @@ extends ../layout
 
 block content 
   h1 Pokedex
+  h4 Add More: 
+    a.btn-floating.btn-large.ripple-effect.waves-light.red
+      i.material-icons add
 
 
-  .md-layout-spacer
-    .pokedex_table
-      table#pokedex.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp
-        thead
-          each val, index in pokemon[0]
-            th= index
-          th Edit
-        tbody
-          each poke in pokemon
-            tr
-              each val2, index2 in pokemon[0]
-                td= poke[index2]
-              td
-                a.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored Edit
+
+
+  table.striped
+    thead
+      each val, index in pokemon[0]
+        th= index
+      th Edit
+    tbody
+      each poke in pokemon
+        tr
+          each val2, index2 in pokemon[0]
+            td= poke[index2]
+          td
+            a.btn.waves-effect.waves-light edit

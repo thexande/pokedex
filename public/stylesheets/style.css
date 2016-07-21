@@ -310,12 +310,9 @@ a img{
     z-index: 1;
   }
 
-.pokedex_table{
-  text-align: center;
-}
 .pokemon-wear-section {
   position: relative;
-  /*background: url('/images/pokeballs.jpg') center top no-repeat;*/
+  background: url('/images/pika_retro.jpeg') center top no-repeat;
   background-size: cover;
   height: 800px;
 }
