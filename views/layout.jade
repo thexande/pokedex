@@ -13,18 +13,29 @@ html
     link(rel='stylesheet' href="/assets/materialize-css/dist/css/materialize.min.css") 
   body
     nav
-      .nav-wrapper
-        a.brand-logo(href='#') Logo
-        ul#nav-mobile.right.hide-on-med-and-down
+      .nav-wrapper.green.accent-3
+        a.brand-logo(href='/')
+          img(src="/images/pokemon-logo.png")
+        a.button-collapse(href='#', data-activates='mobile-demo')
+          i.material-icons menu
+        ul.right.hide-on-med-and-down
           li
-            a(href='sass.html') Sass
+            a(href='/trainers') Trainers
           li
-            a(href='badges.html') Components
+            a(href='/pokemon') Pokemon
           li
-            a(href='collapsible.html') JavaScript
+            a(href='/gym') Gym
+        ul#mobile-demo.side-nav
+          li
+            a(href='/trainers') Trainers
+          li
+            a(href='/pokemon') Pokemon
+          li
+            a(href='/gym') Gym
+
   .container
     block content
-  footer.page-footer
+  footer.page-footer.green.accent-3
     .container
       .row
         .col.l6.s12

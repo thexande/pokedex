@@ -8,7 +8,7 @@ require('dotenv').config()
 var routes = require('./routes/index');
 var trainers = require('./routes/trainers');
 var pokemon = require('./routes/pokemon');
-
+var gym = require('./routes/gym')
 
 var app = express();
 
@@ -28,6 +28,7 @@ app.use('/assets',  express.static(__dirname + '/node_modules/'))
 app.use('/', routes);
 app.use('/trainers', trainers);
 app.use('/pokemon', pokemon);
+app.use('/gym', gym)
 
 
 // catch 404 and forward to error handler
