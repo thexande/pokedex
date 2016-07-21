@@ -350,7 +350,7 @@ exactly match, but it should look as good or preferably BETTER than the mockups:
 
 ## TRAINERS SHOW PAGE /trainers/:id
 
-![Trainers - Show](https://github.com/gSchool/pokemon-node/blob/master/mockups/trainers-index.png)
+![Trainers - Show](https://github.com/gSchool/pokemon-node/blob/master/mockups/trainers-show.png)
 
 ## POKEMÓN INDEX
 
