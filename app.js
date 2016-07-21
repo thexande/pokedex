@@ -11,14 +11,10 @@ var pokemon = require('./routes/pokemon');
 
 
 var app = express();
-var expressLayouts = require('express-ejs-layouts');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-app.use(expressLayouts);
-
-
+app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -31,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/trainers', trainers);
 app.use('/pokemon', pokemon);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

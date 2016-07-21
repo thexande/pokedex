@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('trainers/index', {passedInData: "xyz"});
+  // res.send("woot")
+  res.render('pokemon/index', {passedInData: "abc"});
 });
 
 module.exports = router;
