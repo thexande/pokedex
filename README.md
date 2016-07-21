@@ -9,7 +9,7 @@ __Stay calm and code on!__
 ## Assessment Overview
 
 **Pokemón Node** is an app where a user can manage trainers and their corresponding
-Pokemón to spar in a gym. Users should be able to READ, UPDATE, and DELETE Pokemón,
+Pokemón to battle in a gym. Users should be able to READ, UPDATE, and DELETE Pokemón,
 as well as assign Pokemón to the gym (details below).
 
 Your app should look at _least_ as good as the wireframes, preferably better.
@@ -246,7 +246,7 @@ __#7__
 ```
 When I visit the gym home page
 And two Pokemón are already in the gym
-Then I see a 'spar' button
+Then I see a 'battle' button
 ```
 
 __#8__
@@ -254,7 +254,7 @@ __#8__
 ```
 When I visit the gym home page
 And only one Pokemón is in the gym
-Then I do not see the 'spar' button
+Then I do not see the 'battle' button
 ```
 
 __#9__
@@ -262,7 +262,7 @@ __#9__
 ```
 When I visit the gym home page
 And two Pokemón are already in the gym
-And I click the 'spar' button
+And I click the 'battle' button
 Then the Pokemón with the higher Combat Power 'wins' the fight
 And the winning Pokemón's name is displayed on the page next to the word 'WINNER!'
 ```
@@ -285,7 +285,7 @@ __#1__
 
 ```
 As a user
-When I make 2 Pokemón spar
+When I make 2 Pokemón battle
 Then the winner's CP is incremented by 20
 ```
 
