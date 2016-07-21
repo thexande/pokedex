@@ -153,7 +153,7 @@ And that Pokemón is no longer listed
 ```
 
 
-_OVERVIEW of STORY # 7_
+_OVERVIEW of STORY # 10_
 
 * You will use cookies to set the values `p1` and `p2` to be the `id `of a Pokemón.  
 * When you visit the Pokemón home page, if either the `p1` or `p2` cookies is not set,
