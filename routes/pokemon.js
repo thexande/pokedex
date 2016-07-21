@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var queries = require('../lib/queries')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  // res.send("woot")
-  res.render('pokemon/index', {passedInData: "abc"});
-});
+router.get('/', (req, res, next) => {
+  queries.getAllPokemon().then((resp) => {
+     res.render('pokemon/index', {pokemon:resp});
+  })
+})
 
 module.exports = router;

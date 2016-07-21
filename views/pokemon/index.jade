@@ -1,4 +1,13 @@
 extends ../layout
 
 block content 
-  h1 woot
+  h1 Our Pokemon
+  table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
+    thead
+      each val, index in pokemon[0]
+        th= index
+    tbody
+      each poke in pokemon
+        tr
+          each val2, index2 in pokemon[0]
+            td= poke[index2]
