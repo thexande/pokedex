@@ -18,6 +18,9 @@ router.get('/:id/edit', (req, res, next) => {
     res.render('pokemon/edit', {pokemon:resp[0]})
   })
 })
+router.get('/:id/delete', (req, res, next) => {
+  // delete
+})
 router.post('/edit', (req, res, next) => {
   queries.updatePokemon(req.body).then((resp) => {
     res.redirect('/pokemon')

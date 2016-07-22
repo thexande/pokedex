@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('#trainerSelect').material_select();
+    $('.mselect').material_select();
     $('#trainerSelectEdit').val($("#trainerId").val());
     $('#trainerSelectEdit').material_select();
     $(".button-collapse").sideNav();

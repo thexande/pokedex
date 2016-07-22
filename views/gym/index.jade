@@ -1,5 +1,19 @@
 extends ../layout
 block content
-  h1 gym
+  h1 Prepare for a Gym Battle!
+  .row
+    .col.s6
+      h1 Pokemon 1
+      .input-field.col.s6
+        select.mselect#gymSelect1(name="gym_poke_1")
+          option(value='', disabled='', selected='') Choose your Pokemon
+          each poke in pokemon
+            option(value="#{poke.id}") #{poke.name}
+    .col.s6
+      h1 Pokemon 1
+      .input-field.col.s6
+        select.mselect#gymSelect1(name="gym_poke_1")
+          option(value='', disabled='', selected='') Choose your Pokemon
+          each poke in pokemon
+            option(value="#{poke.id}") #{poke.name}
 
-  
