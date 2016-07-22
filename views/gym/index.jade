@@ -1,19 +1,16 @@
 extends ../layout
 block content
-  h1 Prepare for a Gym Battle!
+  h1.center-align Prepare for a Gym Battle! 
   .row
-    .col.s6
+    .col.s6.center-align
       h1 Pokemon 1
-      .input-field.col.s6
-        select.mselect#gymSelect1(name="gym_poke_1")
-          option(value='', disabled='', selected='') Choose your Pokemon
-          each poke in pokemon
-            option(value="#{poke.id}") #{poke.name}
-    .col.s6
-      h1 Pokemon 1
-      .input-field.col.s6
-        select.mselect#gymSelect1(name="gym_poke_1")
-          option(value='', disabled='', selected='') Choose your Pokemon
-          each poke in pokemon
-            option(value="#{poke.id}") #{poke.name}
-
+      h3 #{pokemonInGym[0].name}
+      h4 Combat Power: #{pokemonInGym[0].cp}
+     
+    .col.s6.center-align
+      h1 Pokemon 2
+      h3 #{pokemonInGym[1].name}
+      h4 Combat Power: #{pokemonInGym[1].cp}
+  .row.center-align
+    a.waves-effect.waves-light.btn-large.green do battle!
+     
