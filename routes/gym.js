@@ -5,6 +5,19 @@ var queries = require('../lib/queries')
 router.get('/', (req, res, next) => {
   res.render('gym')
 })
+router.post('/', (req, res, next) => {
+  if(parseInt(req.body.pokemon_1_cp) > parseInt(req.body.pokemon_2_cp)){
+    // player 1 win
+    var winner = req.body.pokemon_1_name
+  }else if(parseInt(req.body.pokemon_1_cp) == parseInt(req.body.pokemon_2_cp)){
+    // tie
+    var winner = "tie"
+  } else {
+    // player 2 win
+    var winner = req.body.pokemon_2_name
+  }
+  res.render('gym/results',  {winner: winner})
+})
 
 router.get('/:id/add', (req, res, next) => {
     queries.getPokemonById(req.params.id).then((resp) => {

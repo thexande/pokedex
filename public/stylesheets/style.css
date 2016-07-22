@@ -30,3 +30,6 @@ div.badge.new {
   border-radius: 2px;
   width: 50%;
 }
+.gym_battle {
+  background-image: url('/images/poke-flat.png')
+}

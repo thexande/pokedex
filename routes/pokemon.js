@@ -8,6 +8,11 @@ router.route('/')
      res.render('pokemon/index', {pokemon:resp});
   })
 })
+router.get('/reset', (req, res, next) => {
+  queries.setAllPokemonGymTrue().then((resp) => {
+    res.redirect('/pokemon')
+  })
+})
   .post((req, res, next) => {
     queries.createPokemon(req.body).then((resp) => {
       res.redirect('pokemon')

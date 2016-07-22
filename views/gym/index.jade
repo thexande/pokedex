@@ -1,16 +1,21 @@
 extends ../layout
 block content
-  h1.center-align Prepare for a Gym Battle! 
-  .row
-    .col.s6.center-align
-      h1 Pokemon 1
-      h3 #{pokemonInGym[0].name}
-      h4 Combat Power: #{pokemonInGym[0].cp}
-     
-    .col.s6.center-align
-      h1 Pokemon 2
-      h3 #{pokemonInGym[1].name}
-      h4 Combat Power: #{pokemonInGym[1].cp}
-  .row.center-align
-    a.waves-effect.waves-light.btn-large.green do battle!
-     
+  form(action=('/gym/'), method="post")
+    input(type="hidden", name="pokemon_1_cp", value="#{pokemonInGym[0].cp}")
+    input(type="hidden", name="pokemon_2_cp", value="#{pokemonInGym[1].cp}")
+    input(type="hidden", name="pokemon_1_name", value="#{pokemonInGym[0].name}")
+    input(type="hidden", name="pokemon_2_name", value="#{pokemonInGym[1].name}")
+    h1.center-align Prepare for a Gym Battle! 
+    .row
+      .col.s6.center-align
+        h1 Pokemon 1
+        h3 #{pokemonInGym[0].name}
+        h4 Combat Power: #{pokemonInGym[0].cp}
+      
+      .col.s6.center-align
+        h1 Pokemon 2
+        h3 #{pokemonInGym[1].name}
+        h4 Combat Power: #{pokemonInGym[1].cp}
+    .row.center-align
+      button.waves-effect.waves-light.btn-large.green(type="submit") do battle!
+    
