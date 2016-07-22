@@ -4,18 +4,18 @@ var queries = require('../lib/queries')
 
 router.route('/') 
   .get((req, res, next) => {
-  queries.getAllPokemon().then((resp) => {
-     res.render('pokemon/index', {pokemon:resp});
+    queries.getAllPokemon().then((resp) => {
+       res.render('pokemon/index', {pokemon:resp});
+    })
   })
-})
-router.get('/reset', (req, res, next) => {
-  queries.setAllPokemonGymTrue().then((resp) => {
-    res.redirect('/pokemon')
-  })
-})
   .post((req, res, next) => {
     queries.createPokemon(req.body).then((resp) => {
       res.redirect('pokemon')
+    })
+  })
+  router.get('/reset', (req, res, next) => {
+    queries.setAllPokemonGymTrue().then((resp) => {
+      res.redirect('/pokemon')
     })
   })
 router.get('/:id/edit', (req, res, next) => {
@@ -24,7 +24,9 @@ router.get('/:id/edit', (req, res, next) => {
   })
 })
 router.get('/:id/delete', (req, res, next) => {
-  // delete
+  queries.deletePokemonById(req.params.id).then(() => {
+    res.redirect('/pokemon')
+  })
 })
 router.post('/edit', (req, res, next) => {
   queries.updatePokemon(req.body).then((resp) => {

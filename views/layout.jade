@@ -12,31 +12,27 @@ html
   body
     nav
       .nav-wrapper.red.darken-1
-        a.brand-logo(href='/')
+        a.brand-logo.center(href='/')
           img(src="/images/pokemon-logo.png")
         a.button-collapse(href='#', data-activates='mobile-demo')
           i.material-icons menu
-        ul.right.hide-on-med-and-down
+        ul.left.hide-on-med-and-down
           li
             a(href='/trainers') Trainers
           li
             a(href='/pokemon') Pokemon
-          li
-            a(href='/gym') Gym
         ul#mobile-demo.side-nav
           li
             a(href='/trainers') Trainers
           li
             a(href='/pokemon') Pokemon
-          li
-            a(href='/gym') Gym
   block video
   main
     .container
       block content
-  footer.page-footer.red.darken-1
+  footer.page-footer.red.darken-1.center-align
     .footer-copyright
-      .container
+      .container.align-center
         | © 2016 Alexander Murphy, Galvanize
 
     script(src="/assets/jquery/dist/jquery.min.js")

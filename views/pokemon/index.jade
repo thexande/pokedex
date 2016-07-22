@@ -1,10 +1,9 @@
 extends ../layout
 
 block content 
+  h1 Pokedex
   a.btn-floating.btn-large.ripple-effect.waves-light.red(href="/pokemon/new")
     i.material-icons add
-  span
-    h1 Pokedex
   table.striped#pokedex
     thead
       each val, index in pokemon[0]
