@@ -2,7 +2,8 @@ extends ../layout
 block content
       h3 Adding a new Pokemon
       .row
-        form.col.s12
+        form.col.s12(method="post", action="/pokemon")
+          input(type="hidden", value="false", name="in_gym")
           .row
             .input-field.col.s6
               input#poke_name.validate(type='text', name="name")
@@ -10,7 +11,7 @@ block content
 
           .row
             .input-field.col.s6
-              select
+              select(name="trainer_id")
                 option(value='', disabled='', selected='') Choose your option
                 option(value='1') Markel
                 option(value='2') Jacob
@@ -20,10 +21,10 @@ block content
 
           .row
             .input-field.col.12
-              input#poke_cp.validate(type='number')
+              input#poke_cp.validate(type='number', name="cp")
               label(for='poke_cp', name="cp") Combat Power
           .row
-            button.btn.waves-effect.waves-light(type='submit', name='action')
+            button.btn.waves-effect.waves-light(type='submit')
               | Submit
               i.material-icons.right send
 
