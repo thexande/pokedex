@@ -9,16 +9,18 @@ router.route('/')
   })
 })
   .post((req, res, next) => {
-    // create route
-  console.log(req.body)
-  // res.sendStatus(200)
     queries.createPokemon(req.body).then((resp) => {
-      res.render('/pokemon/index')
+      res.redirect('pokemon')
     })
   })
 router.get('/:id/edit', (req, res, next) => {
   queries.getPokemonById(req.params.id).then((resp) => {
     res.render('pokemon/edit', {pokemon:resp[0]})
+  })
+})
+router.post('/edit', (req, res, next) => {
+  queries.updatePokemon(req.body).then((resp) => {
+    res.redirect('/pokemon')
   })
 })
 router.route('/new')
