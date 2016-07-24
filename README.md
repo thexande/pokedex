@@ -1,5 +1,6 @@
 ![](https://github.com/gSchool/pokemon-node/blob/master/public/images/pokemon-logo.png)
-
+## deployed version:
+[Heroku Deployment](https://hidden-fjord-33356.herokuapp.com/)
 ## WELCOME to the Q2 Assessment!
 
 Move deliberately and methodically through the stories provided below.
