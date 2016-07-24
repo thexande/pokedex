@@ -3,5 +3,4 @@ extends layout
 block video
   div#vide-pokemon(data-vide-bg="mp4: /videos/pokemon.mp4" data-vide-options="postion: 0% 0%, muted: true, loop:true")
   .valign-wrapper.align-center.home-container
-    .center-align
-      a.valign.waves-effect.waves-light.btn-large.green show me the pokemon
+    a#showme.valign.waves-effect.waves-light.btn-large.green(href="/pokemon") show me the pokemon

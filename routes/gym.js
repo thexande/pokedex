@@ -7,8 +7,9 @@ router.get('/', (req, res, next) => {
     var pokemonInGym = allPokemon.filter((val) => {
           return val.in_gym == true        
     })
-    console.log(pokemonInGym);
-    
+    if(pokemonInGym.length < 2){
+      res.render('gym/add')
+    }    
     res.render('gym', {
       pokemon: allPokemon,
       pokemonInGym: pokemonInGym
@@ -41,8 +42,6 @@ router.post('/updateGymPokemon', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
-  res.json(req.body)
-
   if(parseInt(req.body.pokemon_1_cp) > parseInt(req.body.pokemon_2_cp)){
     // player 1 win
     var winner = req.body.pokemon_1_name
