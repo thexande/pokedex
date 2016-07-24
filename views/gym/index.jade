@@ -1,21 +1,32 @@
 extends ../layout
 block content
   form(action=('/gym/'), method="post")
-    input(type="hidden", name="pokemon_1_cp", value="#{pokemonInGym[0].cp}")
-    input(type="hidden", name="pokemon_2_cp", value="#{pokemonInGym[1].cp}")
-    input(type="hidden", name="pokemon_1_name", value="#{pokemonInGym[0].name}")
-    input(type="hidden", name="pokemon_2_name", value="#{pokemonInGym[1].name}")
+    input#pokemon_1_cp(type="hidden", name="pokemon_1_cp", value="#{pokemonInGym[0].cp}")
+    input#pokemon_2_cp(type="hidden", name="pokemon_2_cp", value="#{pokemonInGym[1].cp}")
+    input#pokemon_1_id(type="hidden", name="pokemon_1_id", value="#{pokemonInGym[0].id}")
+    input#pokemon_2_id(type="hidden", name="pokemon_2_id", value="#{pokemonInGym[1].id}")
+    input#pokemon_1_name(type="hidden", name="pokemon_1_name", value="#{pokemonInGym[0].name}")
+    input#pokemon_2_name(type="hidden", name="pokemon_2_name", value="#{pokemonInGym[1].name}")
     h1.center-align Prepare for a Gym Battle! 
     .row
       .col.s6.center-align
-        h1 Pokemon 1
-        h3 #{pokemonInGym[0].name}
-        h4 Combat Power: #{pokemonInGym[0].cp}
+        h3 Pokemon 1
+        select.mselect#gymPoke1Select(name="gym_1_select")
+          option(value="0", disabled='') Choose your option
+          each poke in pokemon
+            option(value="#{poke.id}") #{poke.name}
+        h3#poke1Title #{pokemonInGym[0].name}
+        h4#poke1Cp Combat Power: #{pokemonInGym[0].cp}
       
       .col.s6.center-align
-        h1 Pokemon 2
-        h3 #{pokemonInGym[1].name}
-        h4 Combat Power: #{pokemonInGym[1].cp}
+        h3 Pokemon 2
+        select.mselect#gymPoke2Select(name="trainer_id")
+          option(value="0", disabled='') Choose your option
+          each poke in pokemon
+            option(value="#{poke.id}") #{poke.name}
+
+        h3#poke2Title #{pokemonInGym[1].name}
+        h4#poke2Cp Combat Power: #{pokemonInGym[1].cp}
     .row.center-align
       button.waves-effect.waves-light.btn-large.green(type="submit") do battle!
     
